@@ -4,7 +4,10 @@ import queue as Queue
 import threading
 from typing import Iterable
 
-import mxnet as mx
+try:
+    import mxnet as mx
+except ImportError:
+    mx = None
 import numpy as np
 import torch
 from functools import partial
